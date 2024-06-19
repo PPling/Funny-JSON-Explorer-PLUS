@@ -8,7 +8,7 @@ Funny JSON Explorer PLUS，对已有的FJE实现进行设计重构，改用**迭
 
 在项目根目录使用以下命令：
 
-```shell
+```
 cd FJE
 python fje.py -f <json file> -s <style> -i <icon family>
 ```
@@ -17,7 +17,7 @@ python fje.py -f <json file> -s <style> -i <icon family>
 
 即可将JSON文件进行可视化：
 
-```json
+```
 {
     oranges: {
         'mandarin': {                            ├─ oranges
@@ -40,7 +40,7 @@ python fje.py -f <json file> -s <style> -i <icon family>
 
 FJE可以快速切换**风格**（style），包括：树形（tree）、矩形（rectangle）
 
-```python
+```
 # 树形风格
 python fje.py -f test_file.json -s tree -i pocker  
 ├── ♢ oranges
@@ -66,7 +66,7 @@ python fje.py -f test_file.json -s rectangle -i pocker
 
 也可以指定**图标族**（icon family），为中间节点或叶节点指定一套icon
 
-```python
+```
 # 中间节点icon：🔥  叶节点icon：💧   
 python fje.py -f test_file.json -s tree -i fire_water
 ├── 🔥 oranges
@@ -92,7 +92,7 @@ python fje.py -f test_file.json -s tree -i emoji
 
 继承抽象基类`Style`，实现新的风格，并将新风格添加到`config.json`即可！
 
-```json
+```
 "styles": {
     "tree": "TreeStyle",
     "rectangle": "RectangleStyle"
@@ -104,7 +104,7 @@ python fje.py -f test_file.json -s tree -i emoji
 
 只需修改`config.json`，定义新图标族名称，中间结点和叶节点对应的图标即可！
 
-```json
+```
 "icon_families": {
     "pocker": {
       "icon_container": "♢",
